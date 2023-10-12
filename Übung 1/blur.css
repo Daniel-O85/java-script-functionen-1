@@ -1,0 +1,11 @@
+/**************
+* Filter für den 
+  Blur Effect An und Aus
+**************/
+.blur-on {
+    filter: blur(5px)
+}
+
+.blur-off {
+    filter: blur(0)
+}

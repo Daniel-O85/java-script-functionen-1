@@ -1,0 +1,54 @@
+/**************
+* Flexible Anordnung
+  Inhalt mittig zentrietrt
+  äußeren Abstand gegeben
+**************/
+header,
+main {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+/**************
+* Inneren und Äußeren Abstand gegeben
+  Border entfernt Ecken abgerundet
+**************/
+button {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+/**************
+* Hintergundfarbe gegeben
+**************/
+.on {
+    background-color: green;
+}
+
+/**************
+* Hover Hintergrundfarbe änder sich 
+  und Pointer wird hinzugefügt
+**************/
+.on:hover {
+    background-color: rgba(0, 128, 0, 0.688);
+    cursor: pointer;
+}
+
+/**************
+* Hintergundfarbe gegeben
+**************/
+.off {
+    background-color: red;
+}
+
+/**************
+* Hover Hintergrundfarbe änder sich 
+  und Pointer wird hinzugefügt
+**************/
+.off:hover {
+    background-color: rgba(255, 0, 0, 0.668);
+    cursor: pointer;
+}

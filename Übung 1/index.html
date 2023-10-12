@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---------------------
+          CSS verknüpfung
+        ---------------------->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="grayscale.css" />
+    <link rel="stylesheet" href="shadow.css" />
+    <link rel="stylesheet" href="blur.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!---------------------
+          Buttons für die Filterfunktionen
+        ---------------------->
+      <button class="on" onclick="effect_shadow(1)">Shadow An</button>
+      <button class="off" onclick="effect_shadow(2)">Shadow Aus</button>
+      <button class="on" onclick="effect_grayscale(1)">Grayscale An</button>
+      <button class="off" onclick="effect_grayscale(2)">Grayscale Aus</button>
+      <button class="on" onclick="effect_blur(1)">Blur An</button>
+      <button class="off" onclick="effect_blur(2)">Blur Aus</button>
+    </header>
+
+    <!---------------------
+         Hauptinhalt
+        ---------------------->
+    <main>
+      <div id="shadow-lvl">
+        <div id="grayscale-lvl">
+          <div id="blur-lvl">
+            <img src="./bilder/kitchen.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!---------------------
+          JavaScript
+        ---------------------->
+    <script>
+      /* * * * * * * * * * * * * * * * * * *
+       * Diese Funktion schaltet den Effekt
+       * drop-shadow ein bzw. aus
+       * * * * * * * * * * * * * * * * * * */
+      function effect_shadow(taste) {
+        /* Verbindungsaufbau */
+        const t = document.getElementById("shadow-lvl");
+        /* Prüfen, ob die Verbindung gelungen ist */
+        if (t) {
+          if (taste == 1) {
+            /* Einschalten */
+            t.classList.add("shadow-on");
+            t.classList.remove("shadow-off");
+          } else if (taste == 2) {
+            /* Ausschalten */
+            t.classList.remove("shadow-on");
+            t.classList.add("shadow-off");
+          }
+        }
+      }
+      /* * * * * * * * * * * * * * * * * * *
+       * Diese Funktion schaltet den Effekt
+       * grayscale ein bzw. aus
+       * * * * * * * * * * * * * * * * * * */
+      function effect_grayscale(taste) {
+        /* Verbindungsaufbau */
+        const t = document.getElementById("grayscale-lvl");
+        /* Prüfen, ob die Verbindung gelungen ist */
+        if (t) {
+          if (taste == 1) {
+            /* Einschalten */
+            t.classList.add("gray-on");
+            t.classList.remove("gray-off");
+          } else if (taste == 2) {
+            /* Ausschalten */
+            t.classList.remove("gray-on");
+            t.classList.add("gray-off");
+          }
+        }
+      }
+      /* * * * * * * * * * * * * * * * * * *
+       * Diese Funktion schaltet den Effekt
+       * blur  ein bzw. aus
+       * * * * * * * * * * * * * * * * * * */
+      function effect_blur(taste) {
+        /* Verbindungsaufbau */
+        const t = document.getElementById("blur-lvl");
+        /* Prüfen, ob die Verbindung gelungen ist */
+        if (t) {
+          if (taste == 1) {
+            /* Einschalten */
+            t.classList.add("blur-on");
+            t.classList.remove("blur-off");
+          } else if (taste == 2) {
+            /* Ausschalten */
+            t.classList.remove("blur-on");
+            t.classList.add("blur-off");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

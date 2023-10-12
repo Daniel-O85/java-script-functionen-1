@@ -1,0 +1,11 @@
+/**************
+* Filter für die 
+  Graustufen An und Aus
+**************/
+.gray-on {
+  filter: grayscale(1);
+}
+
+.gray-off {
+  filter: grayscale(0);
+}

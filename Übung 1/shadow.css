@@ -1,0 +1,11 @@
+/**************
+* Filter für den 
+  Schatten An und Aus
+**************/
+.shadow-on {
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.shadow-off {
+    filter: drop-shadow();
+}
